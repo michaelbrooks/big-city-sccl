@@ -274,6 +274,9 @@ a:hover .proj-title {
     clear: both;
     width: 900px; /* watch out if the page width changes */
 }
+#projects-sidebar h3 {
+	margin-top: 30px;
+}
 #projects-sidebar br {
     display: none;
 }

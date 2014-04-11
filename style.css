@@ -1,0 +1,252 @@
+/*   
+    Theme Name: Big City SCCL Theme
+    Theme URI: http://example.com
+    Description: Theme for SCCL Website
+    Author: Michael Brooks
+    Author URI: http://themeid.com
+    Template: big-city
+    Version: 1.0
+        
+    License: license.txt
+*/
+
+/* Import shell styles */
+@import url('../big-city/style.css'); 
+
+/** Fix clearfix **/
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; }  
+
+/** Remove excess margin from sidebars **/
+#sidebar {
+    margin-bottom: 0;
+    width: 292px;
+}
+
+/** Remove underline from links in h4 **/
+/** This is just for the People page really **/
+h4 a {
+    text-decoration: none;
+}
+h4 a:hover {
+    text-decoration: underline;
+}
+
+#access ul li.current_page_item > a, #access ul li.current-menu-ancestor > a, #access ul li.current-menu-item > a, #access ul li.current-menu-parent > a {
+    background-color: #ADB4B8;
+}
+
+#access li:hover > a, #access ul ul :hover > a {
+    background-color: #C3C8CB;
+}
+
+#access a {
+    padding: 6px 12px 0 12px;
+    border-bottom: none;
+    line-height: 1.8;
+    margin: 0px;
+}
+
+#access ul ul {
+    top: 32px;
+}
+
+#header {
+    position: relative;
+}
+
+/** Hide the text header **/
+#header h1 {
+    width: 350px;
+    display: none;
+    /*font-size: 0;
+    text-indent: -1000px;*/
+}
+
+/** Place a search box in the header **/
+#header #search-box {
+    z-index: 1;
+    position: absolute;
+    bottom: 23px;
+    right: 0;
+}
+
+/** Position the link in the header to fill the space **/
+#header-link {
+    width: 60%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    margin-top: -40px;
+}
+
+/** Use sans-serif fonts for headers and remove italic on h2 **/
+h1,h2,h3,h4,h5,h6 {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+h2 {
+    font-style: normal;
+}
+
+/** Remove space for sidebar on pages without sidebar **/
+#content {
+    width: 900px;
+    margin-right: auto;
+}
+#content.with-sidebar {
+    width: 558px;
+    margin-right: 50px;
+}
+#content .post *{
+	max-width: none;
+}
+
+/** Format the news list more carefully **/
+#sidebar .wp-cpl {
+    padding-left: 0 !important;
+    line-height: 1.5em;
+}
+
+/** Standardize space next to search button **/
+#searchsubmit {
+    margin-left: 2px;
+}
+
+
+/** The 2nd widget box (base-widgets) **/
+#footer {
+    padding-top: 0;
+    height: 60px;
+}
+#footer .footer-container {
+    width: 900px;
+    margin: 0 auto;
+}
+#footer .copyright {
+    margin: 0;
+    width: auto;
+    float: left;
+    padding: 0px;
+    margin-top: 20px;
+}
+#base-widgets {
+    float: right;
+    margin-top: 10px;
+}
+#base-widgets .blogroll img {
+    max-height: 40px;
+}
+#base-widgets .blogroll li {
+    float: left;
+    margin-right: 5px;
+}
+#base-widgets .blogroll {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+/** general project styles **/
+.project {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 100%;
+    clear: both;
+}
+.project:after {
+    clear: both;
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+}
+.project.proj-preview {
+    clear:none;
+    min-height: 128px;
+}
+.project a {
+    text-decoration: none;
+}
+
+.project .img-wrap {
+    padding: 3px;
+    border: 1px solid #ccc;
+    margin: 0 20px 20px 0;
+    float: left;
+}
+.project .proj-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 150px;
+}
+
+.project .proj-text {
+    min-height: 10px;
+}
+.project .proj-desc {
+    margin: 0;
+    line-height: 1.5em;
+}
+.project .proj-desc  p {
+    line-height: 1.5em;
+}
+.project .proj-title {
+    margin-bottom: 10px;
+}
+a:hover .proj-title {
+    text-decoration: underline;
+}
+
+
+/** The projects list for the front page **/
+#content.with-sidebar .entry-content {
+    overflow: visible; /* this is to let the projects sidebar hang out */
+}
+#projects-sidebar {
+    clear: both;
+    width: 900px; /* watch out if the page width changes */
+}
+#projects-sidebar h3 {
+    margin-bottom:12px;
+    border-bottom:1px solid #D2D6D8;
+}
+#projects-sidebar br {
+    display: none;
+}
+#projects-sidebar .project {
+    float: left;
+    width: 440px;
+}
+
+#projects-sidebar .proj-img {
+    width: 130px;
+    height: 100px;
+}
+
+/** The projects list for the research page **/
+/** Duplicate clearfix **/
+#research-projects .project:before, #research-projects .project:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+#research-projects .project:after { clear: both; }  
+#research-projects .project { zoom: 1; }  
+
+.postdata .vcard,
+.postdata .published {
+	font-size:1.2em;
+}
+
+
+/** Layout for the people page **/
+.person-block {
+	width: 425px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.person-block.offset {
+	margin-left: 50px;
+}

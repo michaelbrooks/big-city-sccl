@@ -13,6 +13,66 @@
 /* Import shell styles */
 @import url('../big-city/style.css'); 
 
+/* Set some defaults */
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+}
+ul, ol, p, dl {
+	line-height: 1.42857143;
+}
+
+ul, ol {
+  margin: 0 0 10px 0;
+}
+ul ul, ol ul,
+ul ol, ol ol {
+  margin-bottom: 0;
+}
+
+h1, h2, h3,
+#content h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  border: none;
+}
+
+h4, h5, h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Override all the random fonts set by big city */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+p.tags {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#wp-calendar caption {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+blockquote {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	margin-left: 20px;
+}
+
+.postdata .vcard,
+.postdata .published {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-variant: normal;
+	text-transform: none;
+}
+
+.postdata {
+	border: none;
+	padding: 0;
+}
+
 /** Fix clearfix **/
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
 .clearfix:after { clear: both; }  
@@ -81,10 +141,6 @@ h4 a:hover {
     margin-top: -40px;
 }
 
-/** Use sans-serif fonts for headers and remove italic on h2 **/
-h1,h2,h3,h4,h5,h6 {
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
-}
 h2 {
     font-style: normal;
 }
@@ -97,6 +153,9 @@ h2 {
 #content.with-sidebar {
     width: 558px;
     margin-right: 50px;
+}
+#content .post {
+	border-bottom: none;
 }
 #content .post *{
 	max-width: none;
@@ -150,9 +209,7 @@ h2 {
 
 /** general project styles **/
 .project {
-    margin-right: 10px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+	margin: 0 0 20px 0;
     width: 100%;
     clear: both;
 }
@@ -165,7 +222,7 @@ h2 {
 }
 .project.proj-preview {
     clear:none;
-    min-height: 128px;
+    min-height: 108px;
 }
 .project a {
     text-decoration: none;
@@ -174,7 +231,6 @@ h2 {
 .project .img-wrap {
     padding: 3px;
     border: 1px solid #ccc;
-    margin: 0 20px 20px 0;
     float: left;
 }
 .project .proj-img {
@@ -187,6 +243,7 @@ h2 {
 
 .project .proj-text {
     min-height: 10px;
+	margin-left: 226px;
 }
 .project .proj-desc {
     margin: 0;
@@ -211,21 +268,27 @@ a:hover .proj-title {
     clear: both;
     width: 900px; /* watch out if the page width changes */
 }
-#projects-sidebar h3 {
-    margin-bottom:12px;
-    border-bottom:1px solid #D2D6D8;
-}
 #projects-sidebar br {
     display: none;
 }
 #projects-sidebar .project {
     float: left;
-    width: 440px;
+    width: 430px;
+	font-size: 12px;
+	margin-right: 20px;
 }
 
-#projects-sidebar .proj-img {
+#projects-sidebar .project h4 {
+	margin-top: 0;
+}
+
+#projects-sidebar .project .proj-img {
     width: 130px;
     height: 100px;
+}
+
+#projects-sidebar .project .proj-text {
+	margin-left: 150px;
 }
 
 /** The projects list for the research page **/
@@ -234,17 +297,13 @@ a:hover .proj-title {
 #research-projects .project:after { clear: both; }  
 #research-projects .project { zoom: 1; }  
 
-.postdata .vcard,
-.postdata .published {
-	font-size:1.2em;
-}
-
 
 /** Layout for the people page **/
 .person-block {
 	width: 425px;
 	float: left;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+	font-size: 12px;
 }
 
 .person-block.offset {

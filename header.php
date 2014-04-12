@@ -10,6 +10,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class() ?>>
+	<div id="sticky-wrap">
     <div id="header-wrapper">
         <div id="header">
             <a id="header-link" href="<?php echo home_url(); ?>">

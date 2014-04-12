@@ -39,9 +39,57 @@ h1, h2, h3,
   border: none;
 }
 
+#content h2 a,
+#content h3 a,
+#content h4 a,
+#content h5 a,
+#content h6 a {
+	text-decoration: none;
+}
+
+#content h2 a:hover,
+#content h3 a:hover,
+#content h4 a:hover,
+#content h5 a:hover,
+#content h6 a:hover {
+	text-decoration: underline;
+}
 h4, h5, h6 {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+/* Non-default input elements */
+input[type=text],
+textarea,
+#commentform input.text, 
+#commentform textarea {
+  display: block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  margin: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.comment-form label {
+	width: 90px;
+	float: left;
+}
+ 
+.comment-form-author, 
+.comment-form-email, 
+.comment-form-url {
+	width: auto;
 }
 
 /* Override all the random fonts set by big city */
@@ -178,11 +226,32 @@ h2 {
     margin-left: 2px;
 }
 
+/* Sticky footer styles */
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+#sticky-wrap {
+	min-height: 100%;
+}
+
+#root {
+	overflow:auto;
+	padding-bottom: 60px; /* must be same height as the footer */
+}
+
+/* end sticky footer styles */
 
 /** The 2nd widget box (base-widgets) **/
 #footer {
     padding-top: 0;
-    height: 60px;
+    height: 59px;
+	background: #eee;
+	border-top: 1px solid #ccc;
+	position: relative;
+	margin-top: -60px; /* negative value of footer height+border */
+	clear:both;
 }
 #footer .footer-container {
     width: 900px;

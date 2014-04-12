@@ -1,5 +1,6 @@
 	</div><!--#main-->
-</div>
+</div> <!--#root-->
+</div> <!--#sticky-wrap-->
 <div id="footer">
     <div class="footer-container">
         <p class="copyright">&copy; <?php echo date('Y');?> <?php bloginfo( 'name' ); ?> All Rights Reserved.
